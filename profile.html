@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <span>SUMMIT</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+                        <li><a href="create-catalogue.html" class="nav-link" data-page="create-catalogue">Create</a></li>
+                    <li><a href="profile.html" class="nav-link active" data-page="profile">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="#" class="nav-link" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="catalogue">Catalogue</a></li>
+                <li><a href="#" class="nav-link" data-page="create-catalogue">Create</a></li>
+                <li><a href="#" class="nav-link" data-page="designer">Designers</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Designer Profile Page -->
+    <section id="designer" class="page">
+        <div class="designer-profile-header">
+            <div class="container">
+                <div class="designer-profile-container">
+                    <div class="designer-avatar-large"></div>
+                    <div class="designer-info-large">
+                        <h1>Sophia Reynolds</h1>
+                        <p>Fashion Designer | New York, NY</p>
+                        <button class="btn btn-primary">Follow</button>
+                        <button class="btn btn-outline">Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="profile-tabs">
+                <div class="profile-tab active" data-tab="catalogues">Catalogues</div>
+                <div class="profile-tab" data-tab="designs">Designs</div>
+                <div class="profile-tab" data-tab="about">About</div>
+                <div class="profile-tab" data-tab="reviews">Reviews</div>
+            </div>
+
+            <div class="tab-content active" id="catalogues-tab">
+                <div class="catalogues-grid">
+                    <div class="card catalogue-card">
+                        <div class="catalogue-card-image" style="background-image: url('https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="catalogue-card-info">
+                            <h3 class="catalogue-card-title">Modern Elegance</h3>
+                            <p class="catalogue-card-count">12 Designs</p>
+                            <button class="btn btn-outline">View Catalogue</button>
+                        </div>
+                    </div>
+
+                    <div class="card catalogue-card">
+                        <div class="catalogue-card-image" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="catalogue-card-info">
+                            <h3 class="catalogue-card-title">Urban Chic</h3>
+                            <p class="catalogue-card-count">8 Designs</p>
+                            <button class="btn btn-outline">View Catalogue</button>
+                        </div>
+                    </div>
+
+                    <div class="card catalogue-card">
+                        <div class="catalogue-card-image" style="background-image: url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                        <div class="catalogue-card-info">
+                            <h3 class="catalogue-card-title">Glamour Nights</h3>
+                            <p class="catalogue-card-count">6 Designs</p>
+                            <button class="btn btn-outline">View Catalogue</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analytics-overview">
+                    <div class="card analytic-card">
+                        <div class="number">2.4K</div>
+                        <div class="label">Followers</div>
+                    </div>
+                    <div class="card analytic-card">
+                        <div class="number">8.2K</div>
+                        <div class="label">Saves</div>
+                    </div>
+                    <div class="card analytic-card">
+                        <div class="number">3.5K</div>
+                        <div class="label">Views</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
