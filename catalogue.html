@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogue Detail</title>
+    <title>Browse Catalogues - SUMMIT</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,7 +18,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                     
+                    <li><a href="catalogue.html" class="nav-link active">Catalogue</a></li>
                     <li><a href="create-catalogue.html" class="nav-link">Create</a></li>
                     <li><a href="profile.html" class="nav-link">Profile</a></li>
                 </ul>
@@ -30,88 +30,179 @@
         <div class="mobile-nav">
             <ul>
                 <li><a href="index.html" class="nav-link">Home</a></li>
-                 
+                <li><a href="catalogue.html" class="nav-link">Catalogue</a></li>
                 <li><a href="create-catalogue.html" class="nav-link">Create</a></li>
                 <li><a href="profile.html" class="nav-link">Profile</a></li>
             </ul>
         </div>
     </header>
-    <!-- Catalogue Detail Page -->
-    <section id="" class="">
-        <div class="catalogue-header">
-            <div class="container">
-                <h1 class="catalogue-title">Summer '24 Collection</h1>
-                <p class="catalogue-subtitle">by Eva Monti</p>
-                
-                <div class="catalogue-designer">
-                    <div class="designer-avatar"></div>
-                    <div class="designer-info">
-                        <h3>Eva Monti</h3>
-                        <p>Fashion Designer</p>
-                    </div>
-                </div>
 
-                <div class="catalogue-actions">
-                    <button class="btn btn-primary">Message Designer</button>
-                    <button class="btn btn-outline">Order Now</button>
-                    <button class="btn btn-light"><i class="far fa-bookmark"></i> Save Collection</button>
-                </div>
-            </div>
-        </div>
-
+    <!-- Catalogues Browsing Page -->
+    <section id="catalogues" class="page">
         <div class="container">
-            <div class="catalogue-details">
-                <h3>Details</h3>
-                <ul class="details-list">
-                    <li>
-                        <span class="detail-label">Season:</span>
-                        <span>Summer 2024</span>
-                    </li>
-                    <li>
-                        <span class="detail-label">Styles:</span>
-                        <span>Bobo, Resort</span>
-                    </li>
-                    <li>
-                        <span class="detail-label">Sizes:</span>
-                        <span>XS - XL</span>
-                    </li>
-                    <li>
-                        <span class="detail-label">Price Range:</span>
-                        <span>$140 - $350</span>
-                    </li>
-                    <li>
-                        <span class="detail-label">Materials:</span>
-                        <span>Cotton, Linen, Silk</span>
-                    </li>
-                </ul>
-            </div>
-
             <div class="section-header">
-                <h2 class="section-title">Collection Designs</h2>
+                <h1 class="section-title">Fashion Catalogues</h1>
+                <p class="section-subtitle">Browse collections from designers worldwide</p>
             </div>
 
-            <div class="designs-grid">
-                <div class="card design-card">
-                    <div class="design-image" style="background-image: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="design-info">
-                        <h3 class="design-title">Floral Maxi Dress</h3>
-                        <p class="design-price">$180</p>
-                        <button class="btn btn-outline">View Details</button>
+            <!-- Search and Filter -->
+            <div class="search-filter-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search catalogues..." class="search-input">
+                    <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="seasonFilter">Season:</label>
+                        <select id="seasonFilter" class="form-control">
+                            <option value="">All Seasons</option>
+                            <option value="spring">Spring</option>
+                            <option value="summer">Summer</option>
+                            <option value="fall">Fall</option>
+                            <option value="winter">Winter</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="styleFilter">Style:</label>
+                        <select id="styleFilter" class="form-control">
+                            <option value="">All Styles</option>
+                            <option value="casual">Casual</option>
+                            <option value="formal">Formal</option>
+                            <option value="boho">Boho</option>
+                            <option value="sporty">Sporty</option>
+                            <option value="vintage">Vintage</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="priceFilter">Price Range:</label>
+                        <select id="priceFilter" class="form-control">
+                            <option value="">All Prices</option>
+                            <option value="0-200">$0 - $200</option>
+                            <option value="200-500">$200 - $500</option>
+                            <option value="500-1000">$500 - $1000</option>
+                            <option value="1000">$1000+</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Catalogues Grid -->
+            <div class="catalogues-grid">
+                <!-- Catalogue 1 -->
+                <div class="card catalogue-card">
+                    <div class="catalogue-card-image" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="catalogue-card-info">
+                        <h3 class="catalogue-card-title">Summer '26 Collection</h3>
+                        <p class="catalogue-card-count">by Eva Monti</p>
+                        <p class="design-price">$140 - $350</p>
+                        <a href="design-detail.html" class="btn btn-outline">View Catalogue</a>
                     </div>
                 </div>
 
-                <div class="card design-card">
-                    <div class="design-image" style="background-image: url('https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
-                    <div class="design-info">
-                        <h3 class="design-title">Chic Yellow Suit</h3>
-                        <p class="design-price">$220</p>
-                        <button class="btn btn-outline">View Details</button>
+                <!-- Catalogue 2 -->
+                <div class="card catalogue-card">
+                    <div class="catalogue-card-image" style="background-image: url('https://images.unsplash.com/photo-1515744967553-2e0905bcad38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="catalogue-card-info">
+                        <h3 class="catalogue-card-title">Urban Chic</h3>
+                        <p class="catalogue-card-count">by Sophia Reynolds</p>
+                        <p class="design-price">$180 - $450</p>
+                        <a href="design-detail.html" class="btn btn-outline">View Catalogue</a>
+                    </div>
+                </div>
+
+                <!-- Catalogue 3 -->
+                <div class="card catalogue-card">
+                    <div class="catalogue-card-image" style="background-image: url('https://images.unsplash.com/photo-1594938298603-c8148c4dae35?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="catalogue-card-info">
+                        <h3 class="catalogue-card-title">Luxury Elegance</h3>
+                        <p class="catalogue-card-count">by Marco Rossi</p>
+                        <p class="design-price">$250 - $800</p>
+                        <a href="design-detail.html" class="btn btn-outline">View Catalogue</a>
+                    </div>
+                </div>
+
+                <!-- Catalogue 4 -->
+                <div class="card catalogue-card">
+                    <div class="catalogue-card-image" style="background-image: url('https://images.unsplash.com/photo-1508164185886-e2b12e0ad2d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="catalogue-card-info">
+                        <h3 class="catalogue-card-title">Bohemian Dreams</h3>
+                        <p class="catalogue-card-count">by Isabella Santos</p>
+                        <p class="design-price">$120 - $300</p>
+                        <a href="design-detail.html" class="btn btn-outline">View Catalogue</a>
+                    </div>
+                </div>
+
+                <!-- Catalogue 5 -->
+                <div class="card catalogue-card">
+                    <div class="catalogue-card-image" style="background-image: url('https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="catalogue-card-info">
+                        <h3 class="catalogue-card-title">Minimalist Edge</h3>
+                        <p class="catalogue-card-count">by Yuki Tanaka</p>
+                        <p class="design-price">$160 - $400</p>
+                        <a href="design-detail.html" class="btn btn-outline">View Catalogue</a>
+                    </div>
+                </div>
+
+                <!-- Catalogue 6 -->
+                <div class="card catalogue-card">
+                    <div class="catalogue-card-image" style="background-image: url('https://images.unsplash.com/photo-1556821552-107d89abc5ed?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="catalogue-card-info">
+                        <h3 class="catalogue-card-title">African Fusion</h3>
+                        <p class="catalogue-card-count">by Amara Okonkwo</p>
+                        <p class="design-price">$100 - $280</p>
+                        <a href="design-detail.html" class="btn btn-outline">View Catalogue</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <script src="scripts.js"></script>
 
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">SUMMIT</div>
+                <p>Discover unique fashion designs from talented designers worldwide.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogue.html">Browse Catalogues</a></li>
+                    <li><a href="designers.html">Designers</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 SUMMIT Fashion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

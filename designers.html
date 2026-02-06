@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designers - SUMMIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <a href="index.html">SUMMIT</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="catalogue.html" class="nav-link">Catalogue</a></li>
+                    <li><a href="create-catalogue.html" class="nav-link">Create</a></li>
+                    <li><a href="profile.html" class="nav-link">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="catalogue.html" class="nav-link">Catalogue</a></li>
+                <li><a href="create-catalogue.html" class="nav-link">Create</a></li>
+                <li><a href="profile.html" class="nav-link">Profile</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Designers Page -->
+    <section id="designers" class="page">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Discover Fashion Designers</h1>
+                <p class="section-subtitle">Meet talented designers from around the world</p>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="search-filter-container">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search designers..." class="search-input">
+                    <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="locationFilter">Location:</label>
+                        <select id="locationFilter" class="form-control">
+                            <option value="">All Locations</option>
+                            <option value="new-york">New York</option>
+                            <option value="paris">Paris</option>
+                            <option value="london">London</option>
+                            <option value="milan">Milan</option>
+                            <option value="tokyo">Tokyo</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="specializationFilter">Specialization:</label>
+                        <select id="specializationFilter" class="form-control">
+                            <option value="">All Specializations</option>
+                            <option value="fashion">Fashion</option>
+                            <option value="interior">Interior Design</option>
+                            <option value="graphics">Graphics</option>
+                            <option value="jewelry">Jewelry</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Designers Grid -->
+            <div class="designers-grid">
+                <!-- Designer Card 1 -->
+                <div class="card designer-card">
+                    <div class="designer-avatar" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+                    <div class="designer-card-info">
+                        <h3 class="designer-name">Eva Monti</h3>
+                        <p class="designer-location"><i class="fas fa-map-marker-alt"></i> Milan, Italy</p>
+                        <p class="designer-specialty">Fashion Designer</p>
+                        <div class="designer-stats">
+                            <span><i class="fas fa-folder"></i> 12 Catalogues</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <a href="profile.html" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+
+                <!-- Designer Card 2 -->
+                <div class="card designer-card">
+                    <div class="designer-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+                    <div class="designer-card-info">
+                        <h3 class="designer-name">Sophia Reynolds</h3>
+                        <p class="designer-location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+                        <p class="designer-specialty">Fashion & Lifestyle</p>
+                        <div class="designer-stats">
+                            <span><i class="fas fa-folder"></i> 18 Catalogues</span>
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <a href="profile.html" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+
+                <!-- Designer Card 3 -->
+                <div class="card designer-card">
+                    <div class="designer-avatar" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+                    <div class="designer-card-info">
+                        <h3 class="designer-name">Marco Rossi</h3>
+                        <p class="designer-location"><i class="fas fa-map-marker-alt"></i> Florence, Italy</p>
+                        <p class="designer-specialty">Luxury Fashion</p>
+                        <div class="designer-stats">
+                            <span><i class="fas fa-folder"></i> 8 Catalogues</span>
+                            <span><i class="fas fa-star"></i> 5.0</span>
+                        </div>
+                        <a href="profile.html" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+
+                <!-- Designer Card 4 -->
+                <div class="card designer-card">
+                    <div class="designer-avatar" style="background-image: url('https://images.unsplash.com/photo-1516062423079-7ca13cdc7f5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+                    <div class="designer-card-info">
+                        <h3 class="designer-name">Isabella Santos</h3>
+                        <p class="designer-location"><i class="fas fa-map-marker-alt"></i> São Paulo, Brazil</p>
+                        <p class="designer-specialty">Contemporary Wear</p>
+                        <div class="designer-stats">
+                            <span><i class="fas fa-folder"></i> 15 Catalogues</span>
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <a href="profile.html" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+
+                <!-- Designer Card 5 -->
+                <div class="card designer-card">
+                    <div class="designer-avatar" style="background-image: url('https://images.unsplash.com/photo-1517257373814-b7207e396eba?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+                    <div class="designer-card-info">
+                        <h3 class="designer-name">Yuki Tanaka</h3>
+                        <p class="designer-location"><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</p>
+                        <p class="designer-specialty">Minimalist Design</p>
+                        <div class="designer-stats">
+                            <span><i class="fas fa-folder"></i> 10 Catalogues</span>
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                        <a href="profile.html" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+
+                <!-- Designer Card 6 -->
+                <div class="card designer-card">
+                    <div class="designer-avatar" style="background-image: url('https://images.unsplash.com/photo-1521296573592-7d58c4d30b90?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');"></div>
+                    <div class="designer-card-info">
+                        <h3 class="designer-name">Amara Okonkwo</h3>
+                        <p class="designer-location"><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                        <p class="designer-specialty">African Fashion</p>
+                        <div class="designer-stats">
+                            <span><i class="fas fa-folder"></i> 12 Catalogues</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <a href="profile.html" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">SUMMIT</div>
+                <p>Discover unique fashion designs from talented designers worldwide.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogue.html">Browse Catalogues</a></li>
+                    <li><a href="designers.html">Designers</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 SUMMIT Fashion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

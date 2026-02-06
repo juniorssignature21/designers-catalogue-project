@@ -12,13 +12,14 @@
         <div class="container header-container">
             <div class="logo">
                 <i class="fas fa-crown"></i>
-                <span>SUMMIT</span>
+                <a href="index.html">SUMMIT</a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="nav-link" data-page="home">Home</a></li>
-                        <li><a href="create-catalogue.html" class="nav-link" data-page="create-catalogue">Create</a></li>
-                    <li><a href="profile.html" class="nav-link active" data-page="profile">Profile</a></li>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="catalogue.html" class="nav-link">Catalogue</a></li>
+                    <li><a href="create-catalogue.html" class="nav-link">Create</a></li>
+                    <li><a href="profile.html" class="nav-link active">Profile</a></li>
                 </ul>
             </nav>
             <div class="mobile-menu-btn">
@@ -27,10 +28,10 @@
         </div>
         <div class="mobile-nav">
             <ul>
-                <li><a href="#" class="nav-link" data-page="home">Home</a></li>
-                <li><a href="#" class="nav-link" data-page="catalogue">Catalogue</a></li>
-                <li><a href="#" class="nav-link" data-page="create-catalogue">Create</a></li>
-                <li><a href="#" class="nav-link" data-page="designer">Designers</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="catalogue.html" class="nav-link">Catalogue</a></li>
+                <li><a href="create-catalogue.html" class="nav-link">Create</a></li>
+                <li><a href="profile.html" class="nav-link">Profile</a></li>
             </ul>
         </div>
     </header>
@@ -65,7 +66,10 @@
                         <div class="catalogue-card-info">
                             <h3 class="catalogue-card-title">Modern Elegance</h3>
                             <p class="catalogue-card-count">12 Designs</p>
-                            <button class="btn btn-outline">View Catalogue</button>
+                            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                <a href="create-design.html?catalogue=1" class="btn btn-primary" style="flex: 1; text-align: center; margin: 0;">+ Add Design</a>
+                                <button class="btn btn-outline" style="flex: 1;">View</button>
+                            </div>
                         </div>
                     </div>
 
@@ -74,7 +78,10 @@
                         <div class="catalogue-card-info">
                             <h3 class="catalogue-card-title">Urban Chic</h3>
                             <p class="catalogue-card-count">8 Designs</p>
-                            <button class="btn btn-outline">View Catalogue</button>
+                            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                <a href="create-design.html?catalogue=2" class="btn btn-primary" style="flex: 1; text-align: center; margin: 0;">+ Add Design</a>
+                                <button class="btn btn-outline" style="flex: 1;">View</button>
+                            </div>
                         </div>
                     </div>
 
@@ -83,9 +90,16 @@
                         <div class="catalogue-card-info">
                             <h3 class="catalogue-card-title">Glamour Nights</h3>
                             <p class="catalogue-card-count">6 Designs</p>
-                            <button class="btn btn-outline">View Catalogue</button>
+                            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                <a href="create-design.html?catalogue=3" class="btn btn-primary" style="flex: 1; text-align: center; margin: 0;">+ Add Design</a>
+                                <button class="btn btn-outline" style="flex: 1;">View</button>
+                            </div>
                         </div>
                     </div>
+                </div>
+
+                <div style="margin-top: 30px; margin-bottom: 30px;">
+                    <a href="create-catalogue.html" class="btn btn-primary"><i class="fas fa-plus"></i> Create New Catalogue</a>
                 </div>
 
                 <div class="analytics-overview">

@@ -1,57 +1,23 @@
-// Navigation functionality
+// Minimal JavaScript - Most functionality handled by Django backend
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
 
-
-    // Cover Image Upload with Drag & Drop
-    const coverImageUpload = document.getElementById('coverImageUpload');
-    const coverImageInput = document.getElementById('coverImage');
-
-    if (coverImageUpload && coverImageInput) {
-        // Click to upload
-        coverImageUpload.addEventListener('click', function() {
-            coverImageInput.click();
-        });
-
-        // Drag and drop
-        coverImageUpload.addEventListener('dragover', function(e) {
-            e.preventDefault();
-            this.style.borderColor = 'var(--primary-color)';
-            this.style.backgroundColor = 'rgba(106, 90, 205, 0.05)';
-        });
-
-        coverImageUpload.addEventListener('dragleave', function(e) {
-            e.preventDefault();
-            this.style.borderColor = 'var(--border-color)';
-            this.style.backgroundColor = 'transparent';
-        });
-
-        coverImageUpload.addEventListener('drop', function(e) {
-            e.preventDefault();
-            this.style.borderColor = 'var(--border-color)';
-            this.style.backgroundColor = 'transparent';
-            if (e.dataTransfer.files.length) {
-                coverImageInput.files = e.dataTransfer.files;
-            }
-        });
-
-        coverImageInput.addEventListener('change', function() {
-            if (this.files.length) {
-                coverImageUpload.innerHTML = `<i class="fas fa-check-circle"></i><p>${this.files[0].name}</p>`;
-                coverImageUpload.style.borderColor = 'var(--primary-color)';
-            }
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileNav.classList.toggle('active');
         });
     }
 
-    // Design Items Upload with Drag & Drop
-    for (let i = 1; i <= 4; i++) {
-        const designUpload = document.getElementById(`design${i}Upload`);
-        const designInput = document.getElementById(`design${i}`);
-
-        if (designUpload && designInput) {
-            // Click to upload
-            designUpload.addEventListener('click', function() {
-                designInput.click();
-            });
+    // Close mobile menu when a link is clicked
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileNav.classList.remove('active');
+        });
+    });
+});
 
             // Drag and drop
             designUpload.addEventListener('dragover', function(e) {

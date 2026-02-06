@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container header-container">
             <div class="logo">
@@ -17,7 +18,8 @@
             <nav>
                 <ul>
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="create-catalogue.html" class="nav-link active">Create</a></li>
+                    <li><a href="catalogue.html" class="nav-link">Catalogue</a></li>
+                    <li><a href="create-catalogue.html" class="nav-link">Create</a></li>
                     <li><a href="profile.html" class="nav-link">Profile</a></li>
                 </ul>
             </nav>
@@ -29,10 +31,230 @@
             <ul>
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="catalogue.html" class="nav-link">Catalogue</a></li>
-                <li><a href="create-catalogue.html" class="nav-link active">Create</a></li>
+                <li><a href="create-catalogue.html" class="nav-link">Create</a></li>
                 <li><a href="profile.html" class="nav-link">Profile</a></li>
             </ul>
         </div>
     </header>
+
+    <!-- Saved Designs Page -->
+    <section id="saved-designs" class="page">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Saved Designs</h1>
+                <p class="section-subtitle">Your collection of favorite designs from designers around the world</p>
+            </div>
+
+            <!-- Search and Filter Bar -->
+            <div class="search-filter-container">
+                <div class="search-bar">
+                    <input type="text" id="designSearch" placeholder="Search saved designs..." class="search-input">
+                    <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="designerFilter">Designer:</label>
+                        <select id="designerFilter" class="form-control">
+                            <option value="">All Designers</option>
+                            <option value="eva-monti">Eva Monti</option>
+                            <option value="sophia-reynolds">Sophia Reynolds</option>
+                            <option value="marco-rossi">Marco Rossi</option>
+                            <option value="isabella-santos">Isabella Santos</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="styleFilter">Style:</label>
+                        <select id="styleFilter" class="form-control">
+                            <option value="">All Styles</option>
+                            <option value="casual">Casual</option>
+                            <option value="formal">Formal</option>
+                            <option value="boho">Boho</option>
+                            <option value="resort">Resort</option>
+                            <option value="evening">Evening</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="priceFilter">Price Range:</label>
+                        <select id="priceFilter" class="form-control">
+                            <option value="">All Prices</option>
+                            <option value="0-100">$0 - $100</option>
+                            <option value="100-250">$100 - $250</option>
+                            <option value="250-500">$250 - $500</option>
+                            <option value="500">$500+</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saved Designs Grid -->
+            <div class="designs-grid">
+                <!-- Design Card 1 -->
+                <div class="card design-card">
+                    <div class="design-image" style="background-image: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="design-overlay">
+                        <button class="btn btn-primary"><i class="fas fa-eye"></i> View Details</button>
+                        <button class="btn btn-light remove-save"><i class="fas fa-trash"></i> Remove</button>
+                    </div>
+                    <div class="design-info">
+                        <h3 class="design-title">Floral Maxi Dress</h3>
+                        <p class="design-designer">Eva Monti</p>
+                        <p class="design-price">$180</p>
+                        <div class="design-meta">
+                            <span class="design-style">Resort</span>
+                            <span class="design-rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Card 2 -->
+                <div class="card design-card">
+                    <div class="design-image" style="background-image: url('https://images.unsplash.com/photo-1505696580271-e88ee6baf5d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="design-overlay">
+                        <button class="btn btn-primary"><i class="fas fa-eye"></i> View Details</button>
+                        <button class="btn btn-light remove-save"><i class="fas fa-trash"></i> Remove</button>
+                    </div>
+                    <div class="design-info">
+                        <h3 class="design-title">Minimalist Blazer</h3>
+                        <p class="design-designer">Sophia Reynolds</p>
+                        <p class="design-price">$220</p>
+                        <div class="design-meta">
+                            <span class="design-style">Formal</span>
+                            <span class="design-rating"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Card 3 -->
+                <div class="card design-card">
+                    <div class="design-image" style="background-image: url('https://images.unsplash.com/photo-1515212335169-2fc375e90a0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="design-overlay">
+                        <button class="btn btn-primary"><i class="fas fa-eye"></i> View Details</button>
+                        <button class="btn btn-light remove-save"><i class="fas fa-trash"></i> Remove</button>
+                    </div>
+                    <div class="design-info">
+                        <h3 class="design-title">Boho Summer Dress</h3>
+                        <p class="design-designer">Marco Rossi</p>
+                        <p class="design-price">$145</p>
+                        <div class="design-meta">
+                            <span class="design-style">Boho</span>
+                            <span class="design-rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Card 4 -->
+                <div class="card design-card">
+                    <div class="design-image" style="background-image: url('https://images.unsplash.com/photo-1520763185298-1b434c919abe?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="design-overlay">
+                        <button class="btn btn-primary"><i class="fas fa-eye"></i> View Details</button>
+                        <button class="btn btn-light remove-save"><i class="fas fa-trash"></i> Remove</button>
+                    </div>
+                    <div class="design-info">
+                        <h3 class="design-title">Evening Gown</h3>
+                        <p class="design-designer">Isabella Santos</p>
+                        <p class="design-price">$350</p>
+                        <div class="design-meta">
+                            <span class="design-style">Evening</span>
+                            <span class="design-rating"><i class="fas fa-star"></i> 5.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Card 5 -->
+                <div class="card design-card">
+                    <div class="design-image" style="background-image: url('https://images.unsplash.com/photo-1567406001024-bcb3aa50b49e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="design-overlay">
+                        <button class="btn btn-primary"><i class="fas fa-eye"></i> View Details</button>
+                        <button class="btn btn-light remove-save"><i class="fas fa-trash"></i> Remove</button>
+                    </div>
+                    <div class="design-info">
+                        <h3 class="design-title">Casual T-Shirt</h3>
+                        <p class="design-designer">Eva Monti</p>
+                        <p class="design-price">$65</p>
+                        <div class="design-meta">
+                            <span class="design-style">Casual</span>
+                            <span class="design-rating"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Card 6 -->
+                <div class="card design-card">
+                    <div class="design-image" style="background-image: url('https://images.unsplash.com/photo-1533453118928-5d1158a89e33?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="design-overlay">
+                        <button class="btn btn-primary"><i class="fas fa-eye"></i> View Details</button>
+                        <button class="btn btn-light remove-save"><i class="fas fa-trash"></i> Remove</button>
+                    </div>
+                    <div class="design-info">
+                        <h3 class="design-title">Elegant Skirt</h3>
+                        <p class="design-designer">Sophia Reynolds</p>
+                        <p class="design-price">$190</p>
+                        <div class="design-meta">
+                            <span class="design-style">Formal</span>
+                            <span class="design-rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty State (shown when no designs are saved) -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-state-icon">
+                    <i class="far fa-bookmark"></i>
+                </div>
+                <h2>No Saved Designs Yet</h2>
+                <p>Start exploring and save your favorite designs to build your collection</p>
+                <a href="catalogue.html" class="btn btn-primary">Browse Catalogues</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">SUMMIT</div>
+                <p>Discover unique fashion designs from talented designers worldwide.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogue.html">Browse Catalogues</a></li>
+                    <li><a href="create-catalogue.html">Create Catalogue</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 SUMMIT Fashion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

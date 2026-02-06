@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Design - SUMMIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-crown"></i>
+                <a href="index.html">SUMMIT</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="catalogue.html" class="nav-link">Catalogue</a></li>
+                    <li><a href="profile.html" class="nav-link active">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="catalogue.html" class="nav-link">Catalogue</a></li>
+                <li><a href="profile.html" class="nav-link active">Profile</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Edit Design Page -->
+    <section id="edit-design" class="page">
+        <div class="container">
+            <div class="create-catalogue-container">
+                <div class="dashboard-sidebar">
+                    <h3>Dashboard</h3>
+                    <ul>
+                        <li><a href="profile.html"><i class="fas fa-th-large"></i> My Catalogues</a></li>
+                        <li><a href="create-catalogue.html"><i class="fas fa-plus-circle"></i> Create Catalogue</a></li>
+                        <li><a href="create-design.html"><i class="fas fa-image"></i> Create Design</a></li>
+                        <li><a href="profile.html" class="active"><i class="fas fa-envelope"></i> My Designs</a></li>
+                    </ul>
+                </div>
+
+                <div class="create-form">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+                        <div>
+                            <h2>Edit Design</h2>
+                            <p>Update design details and manage inventory</p>
+                        </div>
+                        <a href="design-detail.html" style="color: #666; text-decoration: none;"><i class="fas fa-times" style="font-size: 24px;"></i></a>
+                    </div>
+
+                    <form id="editDesignForm">
+                        <div class="form-group">
+                            <label for="designName">Design Name *</label>
+                            <input type="text" id="designName" class="form-control" value="Elegant Sundress" placeholder="e.g., Elegant Sundress" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="designImage">Design Image</label>
+                            <div class="upload-area" id="designImageUpload" style="position: relative;">
+                                <img id="imagePreview" src="images/design1.jpg" alt="Current design" style="max-height: 200px; width: auto; margin-bottom: 10px;">
+                                <div style="margin-top: 10px;">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Upload New Photo (Optional)</p>
+                                    <p class="small-text">Drag & drop or click to browse</p>
+                                </div>
+                            </div>
+                            <input type="file" id="designImage" class="form-control image-input" accept="image/*" style="display: none;">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price">Price *</label>
+                            <div style="position: relative;">
+                                <span style="position: absolute; left: 15px; top: 12px; font-size: 16px;">$</span>
+                                <input type="number" id="price" class="form-control" style="padding-left: 30px;" value="89.99" step="0.01" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="designDescription">Description *</label>
+                            <textarea id="designDescription" class="form-control" rows="4" required>A beautiful and elegant sundress perfect for summer occasions. Made from premium cotton fabric with a flattering cut and comfortable fit.</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fabric">Fabric Type *</label>
+                            <select id="fabric" class="form-control" required>
+                                <option value="">Select Fabric</option>
+                                <option value="cotton" selected>Cotton</option>
+                                <option value="silk">Silk</option>
+                                <option value="linen">Linen</option>
+                                <option value="polyester">Polyester</option>
+                                <option value="wool">Wool</option>
+                                <option value="blend">Blend</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="colors">Available Colors</label>
+                            <input type="text" id="colors" class="form-control" placeholder="e.g., Blue, White, Navy (comma-separated)" value="Blue, White, Navy">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sizes">Available Sizes</label>
+                            <input type="text" id="sizes" class="form-control" placeholder="e.g., XS, S, M, L, XL (comma-separated)" value="XS, S, M, L, XL">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">Stock Quantity *</label>
+                            <input type="number" id="quantity" class="form-control" value="42" min="0" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="status">Status *</label>
+                            <select id="status" class="form-control" required>
+                                <option value="active" selected>Active</option>
+                                <option value="inactive">Inactive</option>
+                                <option value="out-of-stock">Out of Stock</option>
+                            </select>
+                        </div>
+
+                        <div class="form-actions">
+                            <a href="profile.html" class="btn btn-light">Cancel</a>
+                            <button type="button" class="btn btn-danger" style="margin-right: 10px;">Delete Design</button>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </form>
+
+                    <div class="info-box">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Tip:</strong> Changes are saved immediately. You can view this design's performance in your profile analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-section">
+                <div class="footer-logo">SUMMIT</div>
+                <p>Discover unique fashion designs from talented designers worldwide.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogue.html">Browse Catalogues</a></li>
+                    <li><a href="create-catalogue.html">Create Catalogue</a></li>
+                    <li><a href="create-design.html">Create Design</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2026 SUMMIT Fashion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
